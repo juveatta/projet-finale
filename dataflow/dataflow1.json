@@ -1,0 +1,66 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_source",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_destination",
+						"type": "DatasetReference"
+					},
+					"name": "destination1"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          DR_NO as string,",
+				"          {Date Rptd} as string,",
+				"          {DATE OCC} as string,",
+				"          {TIME OCC} as string,",
+				"          AREA as string,",
+				"          {AREA NAME} as string,",
+				"          {Rpt Dist No} as string,",
+				"          {Crm Cd} as string,",
+				"          {Crm Cd Desc} as string,",
+				"          {Vict Age} as string,",
+				"          {Vict Sex} as string,",
+				"          {Vict Descent} as string,",
+				"          {Premis Cd} as string,",
+				"          {Premis Desc} as string,",
+				"          {Weapon Used Cd} as string,",
+				"          {Weapon Desc} as string,",
+				"          {Status Desc} as string,",
+				"          {Crm Cd 1} as string,",
+				"          {Crm Cd 2} as string,",
+				"          {Crm Cd 3} as string,",
+				"          {Crm Cd 4} as string,",
+				"          LOCATION as string,",
+				"          {Cross Street} as string,",
+				"          LAT as string,",
+				"          LON as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> destination1"
+			]
+		}
+	}
+}
