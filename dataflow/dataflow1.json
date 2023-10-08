@@ -25,7 +25,14 @@
 					}
 				}
 			],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "filter1"
+				},
+				{
+					"name": "select1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          DateRptd as string,",
@@ -46,7 +53,24 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 sink(allowSchemaDrift: true,",
+				"source1 filter(AREANAME == \"Central\" && CrmCdDesc == \"ROBBERY\") ~> filter1",
+				"filter1 select(mapColumn(",
+				"          DateRptd,",
+				"          DRNO,",
+				"          DATEOCC,",
+				"          TIMEOCC,",
+				"          AREA,",
+				"          AREANAME,",
+				"          RD,",
+				"          CrmCd,",
+				"          CrmCdDesc,",
+				"          Status,",
+				"          CrossStreet,",
+				"          Location1",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
 				"     preCommands: [],",

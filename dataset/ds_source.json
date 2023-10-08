@@ -1,0 +1,80 @@
+{
+	"name": "ds_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls4source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "crime.csv",
+				"container": "container4source"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DateRptd",
+				"type": "String"
+			},
+			{
+				"name": "DRNO",
+				"type": "String"
+			},
+			{
+				"name": "DATEOCC",
+				"type": "String"
+			},
+			{
+				"name": "TIMEOCC",
+				"type": "String"
+			},
+			{
+				"name": "AREA",
+				"type": "String"
+			},
+			{
+				"name": "AREANAME",
+				"type": "String"
+			},
+			{
+				"name": "RD",
+				"type": "String"
+			},
+			{
+				"name": "CrmCd",
+				"type": "String"
+			},
+			{
+				"name": "CrmCdDesc",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "StatusDesc",
+				"type": "String"
+			},
+			{
+				"name": "LOCATION",
+				"type": "String"
+			},
+			{
+				"name": "CrossStreet",
+				"type": "String"
+			},
+			{
+				"name": "Location1",
+				"type": "String"
+			}
+		]
+	}
+}
