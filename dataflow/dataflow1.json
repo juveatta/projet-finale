@@ -18,7 +18,11 @@
 						"referenceName": "ds_destination",
 						"type": "DatasetReference"
 					},
-					"name": "sink1"
+					"name": "sink1",
+					"rejectedDataLinkedService": {
+						"referenceName": "ls4destination",
+						"type": "LinkedServiceReference"
+					}
 				}
 			],
 			"transformations": [],
