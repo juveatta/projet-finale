@@ -20,19 +20,19 @@
 		},
 		"schema": [
 			{
-				"name": "Date.Rptd",
+				"name": "DateRptd",
 				"type": "String"
 			},
 			{
-				"name": "DR.NO",
+				"name": "DRNO",
 				"type": "String"
 			},
 			{
-				"name": "DATE.OCC",
+				"name": "DATEOCC",
 				"type": "String"
 			},
 			{
-				"name": "TIME.OCC",
+				"name": "TIMEOCC",
 				"type": "String"
 			},
 			{
@@ -40,7 +40,7 @@
 				"type": "String"
 			},
 			{
-				"name": "AREA.NAME",
+				"name": "AREANAME",
 				"type": "String"
 			},
 			{
@@ -48,11 +48,11 @@
 				"type": "String"
 			},
 			{
-				"name": "Crm.Cd",
+				"name": "CrmCd",
 				"type": "String"
 			},
 			{
-				"name": "CrmCd.Desc",
+				"name": "CrmCdDesc",
 				"type": "String"
 			},
 			{
@@ -60,7 +60,7 @@
 				"type": "String"
 			},
 			{
-				"name": "Status.Desc",
+				"name": "StatusDesc",
 				"type": "String"
 			},
 			{
@@ -68,11 +68,11 @@
 				"type": "String"
 			},
 			{
-				"name": "Cross.Street",
+				"name": "CrossStreet",
 				"type": "String"
 			},
 			{
-				"name": "Location.1",
+				"name": "Location1",
 				"type": "String"
 			}
 		]
